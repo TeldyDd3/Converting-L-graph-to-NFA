@@ -106,8 +106,8 @@ vert_arcs v (a:as)	| (fst_vtc a) == v	= a:(vert_arcs v as)
 
 
 
-lines :: Vertice -> [Vertice] -> [Arc] -> Int -> [Int] -> [[Arc]]
-lines _ _ _ _ _ = 
+--lines :: Vertice -> [Vertice] -> [Arc] -> Int -> [Int] -> [[Arc]]
+--lines _ _ _ _ _ = 
 
 
 
@@ -214,7 +214,7 @@ newVerts [] _ _	= []
 newVerts (x:xs) c11 c12	| not (coreMember x c11)	= x:(newVerts xs c11 c12)
 						| otherwise					= -}
 
-first :: VASF -> [Vertice]
+{-first :: VASF -> [Vertice]
 first (VASF vertices _ _ _) = vertices
 
 second :: VASF -> [Arc]
@@ -225,7 +225,7 @@ third (VASF _ _ start _) = start
 
 fourth :: VASF -> [Vertice]
 fourth (VASF _ _ _ finished) = finished
-
+-}
 
 
 brackTyp :: Maybe Bracket -> Either String OpCl
